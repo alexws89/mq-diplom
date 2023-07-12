@@ -35,7 +35,7 @@
 .header {
   background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/banner-bg.jpg");
   background-repeat: no-repeat;
-  background-position: center top;
+  background-position: center;
   z-index: 0;
   position: relative;
   background-color: #000000;
@@ -65,7 +65,6 @@
 
 .menu-list {
   display: flex;
-  transition: .5s all;
 }
 
 .menu-link {
@@ -95,7 +94,7 @@
   font-style: normal;
   max-width: 689px;
   margin-top: 104px;
-  line-height: 1.66;
+  line-height: 75px;
   color: #ffffff;
 }
 
@@ -103,11 +102,13 @@
 .articles-container {
   display: flex;
   padding-top: 57px;
+  justify-content: space-between;
 }
 
 .articles {
   display: flex;
   flex-direction: column;
+  max-width: 774px;
 }
 
 .article {
@@ -116,13 +117,12 @@
 
 .article-img {
   display: block;
-  width: 381px;
+  max-width: 381px;
   padding-top: 6px;
 }
 
 .article-box {
   margin-left: 30px;
-  width: 367px;
 }
 
 .article-category-list {
@@ -187,8 +187,7 @@
 }
 
 .aside {
-  width: 272px;
-  margin-left: 120px;
+  max-width: 272px;
 }
 
 .new-posts {
@@ -228,7 +227,6 @@
 .img-post {
   display: block;
   width: 70px;
-  flex-shrink: 0;
 }
 
 .post-box {
@@ -371,7 +369,7 @@
 }
 
 .footer {
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
   margin-top: 88px;
@@ -424,7 +422,6 @@
   align-items: center;
   max-width: 1660px;
   margin: 0 auto;
-  /* margin-bottom: 64px; */
 }
 
 .trends-title,
@@ -439,7 +436,7 @@
 }
 
 .trends-title::before,
-.shop h2::before {
+.shop-title::before {
   content: "";
   position: absolute;
   width: 67px;
@@ -497,28 +494,24 @@
   background-size: cover;
   background-image: url(../images/trend1.jpg);
   text-align: center;
-  max-width: 410px;
 }
 
 .food {
   background-size: cover;
   background-image: url(../images/trend2.jpg);
   text-align: center;
-  max-width: 414px;
 }
 
 .travel {
   background-size: cover;
   background-image: url(../images/trend3.jpg);
   text-align: center;
-  max-width: 414px;
 }
 
 .health {
   background-size: cover;
   background-image: url(../images/trend4.jpg);
   text-align: center;
-  max-width: 410px;
 }
 
 .text-trends {
@@ -615,7 +608,7 @@
   flex-grow: 1;
   padding-top: 25px;
   padding-bottom: 5px;
-  margin-top: -5px;
+  margin-top: -10px;
 }
 
 .shop-link {
@@ -627,67 +620,48 @@
 }
 
 
-
-
-/* .shop-content h3 {
-  margin-top: 25px;
-  font-size: 20px;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-.shop-content p {
-  font-size: 15px;
-  line-height: 22px;
-  font-weight: 400;
-}
-
-
-
-
-
-
-
-.shop-outline {
-  outline: 3px solid #b59f5b;
-} */
-
-
-/* .burger-menu-item {
-  cursor: pointer;
-  display: none;
-  position: absolute;
-} */
-
 .checkbox {
   display: none;
 }
 
 .burger-menu-checked {
   display: none;
+  cursor: pointer;
+  position: absolute;
+  top: 53px;
+  right: 37px;
 }
 
 .burger-menu-closed {
   display: none;
+  position: absolute;
+  cursor: pointer;
+  top: 53px;
+  right: 37px;
 }
 
+picture {
+  text-align: center;
+}
 
 @media (max-width: 1199px) {
   .menu-list {
     display: none;
+    flex-direction: column;
+    margin: 0;
+    position: absolute;
+    right: 70px;
+    top: 20px;
+    height: 0;
+    max-height: 100px;
   }
 
-  
   .menu-list-item:nth-child(n + 2) {
     margin-left: 0;
   }
 
   .burger-menu-checked {
-    cursor: pointer;
     display: block; 
-    position: absolute;
-    top: 20px;
-    right: 10px;
   }
 
   .burger-menu-closed {
@@ -697,14 +671,6 @@
 
   .checkbox:checked ~ .menu-list {
     display: block;
-    flex-direction: column;
-    margin: 0;
-    position: absolute;
-    right: 70px;
-    top: 20px;
-    height: 0;
-    max-height: 100px;
-
   }
 
   .checkbox:checked ~ label .burger-menu-checked {
@@ -713,27 +679,326 @@
 
   .checkbox:checked ~ label .burger-menu-closed {
     display: block;
-    position: absolute;
-    cursor: pointer;
-    top: 20px;
-    right: 10px;
   }
+
+/* header */
+
+  .header {
+    background-image: url(/images/banner-bg-tablet.jpg);
+    min-width: 391px;
+    padding-top: 44px;
+    padding-bottom: 113px;
+  }
+
+  .header-logo {
+    width: 10em;
+  }
+
+  .container {
+    padding: 0 35px 0 35px;
+  }
+
+  .title {
+    font-size: 2.5em;
+    max-width: 15.28em;
+    margin-top: 88px;
+    line-height: 1.375em;
+  }
+
+  .trends-title, .shop-title {
+    font-size: 1.125em;
+    padding: 44px 0 30px;
+  }
+
+  .trends-title::before, .shop-title::before {
+    top: 78px;
+    right: 49px;
+    width: 3.75em;
+  }
+  
 
   .trends-items {
     flex-wrap: wrap;
   }
-  .trends-content {
-    max-width: 50%;
+
+  .text-trends {
+    padding: 33px 32px 29px 30px;
   }
+
+  .trends p {
+    font-size: 17px;
+    line-height: 22px;
+}
+
+  .trends-content {
+    width: calc((100% - 4px) / 2);
+    min-height: 247px;
+    padding: 0px 20px 15px 21px;
+  }
+
+  .articles {
+    max-width: 395px;
+  }
+
 
   .article {
     flex-direction: column;
+    padding-bottom: 16px;
+    border-bottom: 4px solid rgb(238, 238, 238);
+    }
+
+    .article:nth-child(n + 2) {
+      margin-top: 36px;
+  }
+    
+
+  .articles-container {
+    padding-top: 46px;
+}
+
+.article-text {
+  max-width: 390.5px;
+}
+
+
+  .new-post {
+    margin-top: 43px;
+}
+
+.post-title {
+  margin-top: 8px;
+}  
+
+  .shop-container {
+    flex-wrap: wrap;
+    column-gap: 70px;
+    row-gap: 50px;
+    padding-left: 21px;
+    padding-right: 23px;
+    padding-top: 10px;  
+  }
+  
+  .shop-subtitle {
+    font-size: 17px;
+  }
+
+  .shop-outline {
+    outline-offset: 21px;
+    padding-top: 29px;
+    padding-bottom: 5px;
+    margin-top: -14px;
+}
+  
+  .aside {
+    margin-left: 0;
+  }
+
+  .article-box {
+    margin-left: 0;
+    padding-top: 10px;
+    width: auto;
+  }
+
+  .article-title {
+    font-size: 17px;
+    line-height: 22px;
+    margin-top: 8px;
+  } 
+
+  .article-img {
+    max-width: 391px;
+    object-fit: cover;
+  }
+
+  .article-date {
+    margin-top: 30px;
+    margin-bottom: 29px;
+}
+
+.shop-content {
+  max-width: 44.5%;
+}
+
+.footer {
+  padding: 0 2.063em 0 2.1875em;
+  margin-top: 75px;
+}
+
+.copyright {
+  padding-top: 45px;
+}
+
+  .shop-title {
+  padding: 39px 0 29px;
+  }
+
+  .shop-title::before {
+    top: 73px;
+    right: 45px;
+  }
+
+}
+
+@media (max-width: 767px) {
+
+  .container {
+    padding: 0 15px 0;
   }
 
   .header {
-    background-image: url(/images/banner-bg-tablet.jpg);
+    background-image: url(/images/banner-mobile.jpg);
+    width: 100%;
+    max-width: 767px;
+    padding-top: 225px;
+    padding-bottom: 211px;
+    min-width: 0;
   }
 
+  .header-items {
+    justify-content: center;
+  }
+
+  .title {
+    font-size: 26px;
+    line-height: 36px;
+    margin-top: 34px;
+  }
+
+  .header-logo {
+    width: 269px;
+  }
+
+.trends-title, .shop-title {
+  font-size: 16px;
+  padding: 39px 0 34px;   
+  } 
+
+.trends-title::before, .shop-title::before {
+  top: 68px;
+  right: 43px;
+  width: 3.9em;
+  }
+
+  .trends-content {
+    width: 100%;
+  }
+
+  .trends p {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .articles-container {
+    flex-direction: column;
+    padding-top: 38px;
+  }
+
+  .article-img {
+    max-width: 100%;
+  }
+
+  .trends-content {
+    min-height: 232px;
+    padding: 0px 16px 17px 16px;
+  }
+
+  .text-trends {
+    padding: 30px 26px 26px 19px;
+  }
+
+  .trends-items {
+    gap: 2px;
+  }
+
+  .article-title {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .article-box {
+    padding-top: 6px;
+  }
+
+  .article-text {
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: 5px;
+  }
+
+  .article-date {
+    margin-top: 18px;
+    margin-bottom: 14px;
+}
+
+.article {
+  padding-bottom: 20px;
+}
+
+.article:nth-child(n + 2) {
+  margin-top: 29px;
+}
+
+.aside {
+  margin-left: 0;
+  padding-top: 39px;
+  max-width: 100%;
+}
+
+.headline {
+  font-size: 16px;
+}
+
+.headline::before {
+  top: 29px;
+  left: 131px;
+}
+
+.post-title {
+  margin-top: 6px;
+}
+
+.subscription {
+  margin-top: 34px;
+}
+
+.tags {
+  margin-top: 40px;
+}
+
+.tag-list-item {
+  margin-right: 5px;
+}
+
+.categories {
+  margin-top: 32px;
+}
+
+.shop-title {
+  padding: 30px 0 30px;
+}
+
+.shop-content {
+  max-width: 100%;
+}
+
+.shop-title::before {
+  top: 64px;
+  right: 38px;
+  width: 4em;
+} 
+
+.shop-text {
+  margin-top: 4px;
+}
+
+.footer {
+  padding: 0 15px 0 15px;
+  margin-top: 58px;
+}
+
+.articles {
+  max-width: 100%;
+}
 
 
 }
