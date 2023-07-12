@@ -684,7 +684,7 @@ picture {
 /* header */
 
   .header {
-    background-image: url(/images/banner-bg-tablet.jpg);
+    background-image: url(../images/banner-bg-tablet.jpg);
     min-width: 391px;
     padding-top: 44px;
     padding-bottom: 113px;
@@ -846,7 +846,7 @@ picture {
   }
 
   .header {
-    background-image: url(/images/banner-mobile.jpg);
+    background-image: url(../images/banner-mobile.jpg);
     width: 100%;
     max-width: 767px;
     padding-top: 225px;
