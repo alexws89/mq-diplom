@@ -644,7 +644,7 @@ picture {
   text-align: center;
 }
 
-@media (max-width: 1199px) {
+@media ((max-width: 1199px ) and (orientation:portrait)) or ((max-width: 1199px ) and (orientation:landscape))  {
   .menu-list {
     display: none;
     flex-direction: column;
@@ -695,7 +695,7 @@ picture {
   }
 
   .container {
-    padding: 0 35px 0 35px;
+    padding: 0 4.558% 0 4.558%;
   }
 
   .title {
@@ -737,7 +737,7 @@ picture {
   }
 
   .articles {
-    max-width: 395px;
+    max-width: 56.6%;
   }
 
 
@@ -771,10 +771,10 @@ picture {
 
   .shop-container {
     flex-wrap: wrap;
-    column-gap: 70px;
+    column-gap: 11%;
     row-gap: 50px;
-    padding-left: 21px;
-    padding-right: 23px;
+    padding-left: 3%;
+    padding-right: 3.3%;
     padding-top: 10px;  
   }
   
@@ -790,6 +790,7 @@ picture {
 }
   
   .aside {
+    max-width: 39%  ;
     margin-left: 0;
   }
 
@@ -837,9 +838,13 @@ picture {
     right: 45px;
   }
 
+  .shop-img {
+    max-width: 100%;
+  }
+
 }
 
-@media (max-width: 767px) {
+@media (max-width: 640px) and (orientation:portrait) {
 
   .container {
     padding: 0 15px 0;
@@ -979,6 +984,7 @@ picture {
 
 .shop-content {
   max-width: 100%;
+  flex-grow: 1;
 }
 
 .shop-title::before {
