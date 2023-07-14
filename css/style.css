@@ -469,6 +469,7 @@
 .trends ul {
   display: flex;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .trends li {
@@ -488,6 +489,7 @@
   line-height: 24px;
   text-align: left;
   margin-top: 5px;
+  word-wrap: break-word;
 }
 
 .interior {
@@ -644,7 +646,11 @@ picture {
   text-align: center;
 }
 
-@media ((max-width: 1199px ) and (orientation:portrait)) or ((max-width: 640px ) and (orientation:landscape))  {
+.shop-img {
+  max-width: 100%;
+}
+
+@media (max-width: 1199px)  {
   .menu-list {
     display: none;
     flex-direction: column;
@@ -838,13 +844,13 @@ picture {
     right: 45px;
   }
 
-  .shop-img {
-    max-width: 100%;
+} 
+@media ((max-width: 1199px) and (orientation:landscape)){
+  .trends-content {
+  width: calc((100% - 12px) / 4);
   }
-
 }
-
-@media (max-width: 640px) and (orientation:portrait) {
+@media (max-width: 640px) {
 
   .container {
     padding: 0 15px 0;
@@ -1006,5 +1012,10 @@ picture {
   max-width: 100%;
 }
 
+}
 
+@media ((max-width: 640px) and (orientation:landscape)) {
+  .trends-content {
+    width: calc((100% - 4px) / 2);
+    }
 }
