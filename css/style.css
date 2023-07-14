@@ -644,7 +644,7 @@ picture {
   text-align: center;
 }
 
-@media ((max-width: 1199px ) and (orientation:portrait)) or ((max-width: 1199px ) and (orientation:landscape))  {
+@media ((max-width: 1199px ) and (orientation:portrait)) or ((max-width: 640px ) and (orientation:landscape))  {
   .menu-list {
     display: none;
     flex-direction: column;
