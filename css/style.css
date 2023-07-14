@@ -538,6 +538,7 @@
 .shop-content {
   display: flex;
   flex-direction: column;
+  width: 33.3333%;
 }
 
 .shop-subtitle {
@@ -823,7 +824,7 @@ picture {
 }
 
 .shop-content {
-  max-width: 44.5%;
+  width: 44.5%;
 }
 
 .footer {
@@ -989,7 +990,7 @@ picture {
 }
 
 .shop-content {
-  max-width: 100%;
+  width: 100%;
   flex-grow: 1;
 }
 
