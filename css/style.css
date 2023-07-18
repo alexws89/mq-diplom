@@ -119,7 +119,7 @@
   display: block;
   min-width: 381px;
   padding-top: 6px;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .article-box {
@@ -384,7 +384,7 @@
   vertical-align: top;
   font-size: 12px;
   font-weight: 700;
-  color: #b59f5b;
+  color:  #b59f5b;
 }
 
 .footer {
