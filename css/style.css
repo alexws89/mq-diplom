@@ -381,6 +381,7 @@
 }
 
 .category-sup {
+  vertical-align: top;
   font-size: 12px;
   font-weight: 700;
   color: #b59f5b;
@@ -424,13 +425,21 @@
 
 .copyright {
   display: block;
-  text-align: center;
   padding-top: 70px;
   padding-bottom: 40px;
+  text-align: center;
+}
+
+.copyright a {
   font-size: 12px;
   font-weight: 700;
   color: #999999;
 }
+
+.copyright a:hover {
+  border-bottom: 2px solid #999999;
+}
+
 
 
 
