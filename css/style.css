@@ -41,7 +41,6 @@
   background-color: #000000;
   padding: 28px 0 127px;
   background-size: cover;
-  max-width: 1660px;
   margin: 0 auto;
 }
 
@@ -101,7 +100,7 @@
 
 .articles-container {
   display: flex;
-  padding-top: 57px;
+  margin-top: 57px;
   justify-content: space-between;
 }
 
@@ -113,12 +112,14 @@
 
 .article {
   display: flex;
+  align-items: flex-start;
 }
 
 .article-img {
   display: block;
-  max-width: 381px;
+  min-width: 381px;
   padding-top: 6px;
+  object-fit: contain;
 }
 
 .article-box {
@@ -127,6 +128,7 @@
 
 .article-category-list {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .article-category-item:nth-child(n + 2) {
@@ -140,7 +142,7 @@
   text-transform: uppercase;
 }
 
-.article-category-link:hover {
+.trends li a:hover, .article-category-link:hover {
   content: "";
   border-bottom: 2px solid #b59f5b;
 }
@@ -155,6 +157,14 @@
 
 .article-title-link {
   color: #0f0d0e;
+}
+
+.article-title-link:hover {
+  border-bottom: 2px solid #0f0d0e;
+}
+
+.post-link:hover {
+  border-bottom: 2px solid #0f0d0e;
 }
 
 .article-date {
@@ -226,7 +236,7 @@
 
 .img-post {
   display: block;
-  width: 70px;
+  min-width: 70px;
 }
 
 .post-box {
@@ -342,6 +352,10 @@
   font-weight: 700;
 }
 
+.tag-link:hover {
+  border-bottom: 1px solid #0f0d0e;
+}
+
 .categories {
   margin-top: 50px;
 }
@@ -360,6 +374,10 @@
 .category-link {
   color: #000000;
   font-weight: 700;
+}
+
+.category-link:hover {
+  border-bottom: 1px solid #000000;
 }
 
 .category-sup {
@@ -472,7 +490,7 @@
   flex-wrap: wrap;
 }
 
-.trends li {
+.trends li a{
   font-size: 14px;
   color: rgb(181, 159, 91);
   font-weight: bold;
@@ -481,15 +499,22 @@
 
 }
 
-.trends p {
+.trends h3 {
+  text-align: left;
+}
+
+.trends h3 a {
   font-size: 20px;
   color: rgb(255, 255, 255);
   font-weight: bold;
   text-transform: uppercase;
   line-height: 24px;
-  text-align: left;
   margin-top: 5px;
   word-wrap: break-word;
+}
+
+.trends h3 a:hover {
+  border-bottom: 2px solid #ffffff;
 }
 
 .interior {
@@ -760,7 +785,7 @@ picture {
     
 
   .articles-container {
-    padding-top: 46px;
+    margin-top: 46px;
 }
 
 .article-text {
@@ -814,7 +839,7 @@ picture {
   } 
 
   .article-img {
-    max-width: 391px;
+    min-width: 391px;
     object-fit: cover;
   }
 
@@ -902,11 +927,11 @@ picture {
 
   .articles-container {
     flex-direction: column;
-    padding-top: 38px;
+    margin-top: 38px;
   }
 
   .article-img {
-    max-width: 100%;
+    min-width: 100%;
   }
 
   .trends-content {
@@ -1019,4 +1044,129 @@ picture {
   .trends-content {
     width: calc((100% - 4px) / 2);
     }
+}
+
+.hidden {
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0,0,0, 0.5);
+  display: none;
+
+
+}
+
+.form-popup {
+  width: 390px;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: #fff;
+  padding: 55px 30px;
+}
+
+
+body {
+  position: relative;
+}
+
+.popup-closed {
+  position: absolute;
+  right: 0px;
+  top: -25px;
+}
+
+.title-popup {
+  font-size: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+}
+
+.title-popup::after {
+  content: "";
+  position: absolute;
+  width: 67px;
+  height: 3px;
+  background-color: #e1d9bd;
+  top: 100px;
+  left: 160px
+}
+
+.span-popup {
+  display: block;
+}
+
+.choice {
+  width: 100%;
+  margin-bottom: 35px;
+  background-color: #f4f7f6;
+  border: none;
+  padding: 15px 0 15px 17px;
+  appearance: none;
+  position: relative;
+  background-image: url(../svg/select-arrows.svg);
+  background-position: right 5px center;
+  background-repeat: no-repeat;
+}
+
+.textarea-popup:focus, .choice:focus {
+  outline: none;
+  border: 2px solid #b59f5b;
+}
+
+
+.fieldset {
+  display: flex;
+  gap: 16px;
+  border: none;
+  margin-bottom: 35px;
+}
+
+.textarea-popup{
+  width: 100%;
+  background-color: #f4f7f6;
+  border: none;
+  padding: 15px 0 15px 17px;
+  min-height: 130px;
+  resize: none;
+  margin-top: 5px;
+}
+
+.radio {
+  position: relative;
+  appearance: none;
+
+}
+
+.span-fieldset::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  outline: 1px solid #b59f5b;
+  outline-offset: 4px;
+  margin-right: 10px;
+
+  
+}
+
+
+legend {
+  margin-bottom: 10px;
+}
+
+.radio:checked + .span-fieldset::before {
+background-color: #b59f5b;
 }
