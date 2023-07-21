@@ -112,7 +112,7 @@
 
 .article {
   display: flex;
-  align-items: flex-start;
+    
 }
 
 .article-img {
@@ -160,11 +160,11 @@
 }
 
 .article-title-link:hover {
-  border-bottom: 2px solid #0f0d0e;
+  color: #b59f5b;
 }
 
 .post-link:hover {
-  border-bottom: 2px solid #0f0d0e;
+  color: #b59f5b;
 }
 
 .article-date {
@@ -352,8 +352,8 @@
   font-weight: 700;
 }
 
-.tag-link:hover {
-  border-bottom: 1px solid #0f0d0e;
+.tag-list-item:hover {
+  border: 3px solid #b59f5b;
 }
 
 .categories {
@@ -377,7 +377,7 @@
 }
 
 .category-link:hover {
-  border-bottom: 1px solid #000000;
+  color: #b59f5b;
 }
 
 .category-sup {
@@ -523,7 +523,7 @@
 }
 
 .trends h3 a:hover {
-  border-bottom: 2px solid #ffffff;
+  color:rgb(181, 159, 91);
 }
 
 .interior {
@@ -763,7 +763,7 @@ picture {
   }
 
   .text-trends {
-    padding: 33px 32px 29px 30px;
+    padding: 26px 32px 29px 30px;
   }
 
   .trends p {
@@ -807,8 +807,12 @@ picture {
 }
 
 .post-title {
-  margin-top: 8px;
+  margin-top: 10px;
 }  
+
+.category-list-item{
+  padding-bottom: 16px;
+}
 
   .shop-container {
     flex-wrap: wrap;
@@ -821,6 +825,11 @@ picture {
   
   .shop-subtitle {
     font-size: 17px;
+  }
+
+  .trends h3 a {
+    font-size: 17px;
+    line-height: 22px;
   }
 
   .shop-outline {
@@ -837,7 +846,7 @@ picture {
 
   .article-box {
     margin-left: 0;
-    padding-top: 10px;
+    padding-top: 6px;
     width: auto;
   }
 
@@ -848,7 +857,7 @@ picture {
   } 
 
   .article-img {
-    min-width: 391px;
+    min-width: 100%;
     object-fit: cover;
   }
 
@@ -871,7 +880,7 @@ picture {
 }
 
   .shop-title {
-  padding: 39px 0 29px;
+  padding: 44px 0 29px;
   }
 
   .shop-title::before {
